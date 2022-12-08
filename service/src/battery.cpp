@@ -127,7 +127,7 @@ Battery::Battery(Logger* newLogger, bool loglevelSet, QCoreApplication *app, QOb
     filenames << "/sys/class/power_supply/battery/input_suspend"                // e.g. Sony Xperia XA2
               << "/sys/class/power_supply/battery/charging_enabled"             // e.g. for Sony Xperia Z3 Compact Tablet
               << "/sys/class/power_supply/usb/charger_disable"                  // e.g. for Jolla Phone
-              << "/sys/class/power_supply/dollar_cove_battery/enable_charging"; // e.g. for Jolla Tablet
+              << "/sys/class/power_supply/dollar_cove_charger/enable_charging"; // e.g. for Jolla Tablet
 
     foreach(const QString& file, filenames) {
         if(!chargingEnabledFile && QFile::exists(file)) {
